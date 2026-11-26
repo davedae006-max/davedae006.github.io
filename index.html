@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dave Dae — graphic designer and tech enthusiast. Logo design, branding, digital graphics and web experiences.">
+  <title>Dave Dae | Designer & Tech Enthusiast</title>
+  <style>
+    :root{--bg:#070a12;--panel:#0e1422;--panel2:#111b2d;--blue:#238bff;--cyan:#45d5ff;--text:#f4f7ff;--muted:#9ba9bf;--line:rgba(130,170,220,.16);--max:1120px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Arial,sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(7,10,18,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    nav{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:850;letter-spacing:.5px;font-size:1.25rem}.brand span{color:var(--cyan)}
+    .navlinks{display:flex;gap:27px;color:var(--muted);font-size:.92rem}.navlinks a:hover{color:white}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border-radius:9px;background:linear-gradient(110deg,var(--blue),#1765d7);font-weight:750;box-shadow:0 8px 30px #0878ff2b;border:1px solid #58aaff55;transition:.2s}
+    .btn:hover{transform:translateY(-2px);filter:brightness(1.12)}.btn.ghost{background:transparent;box-shadow:none;border:1px solid var(--line)}
+    .hero{padding:100px 0 86px;display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center;min-height:620px}
+    .eyebrow{color:var(--cyan);font-size:.8rem;font-weight:800;letter-spacing:2.5px;text-transform:uppercase}
+    h1{font-size:clamp(3rem,7vw,5.7rem);line-height:1.02;letter-spacing:-3px;margin:18px 0 22px}.gradient{background:linear-gradient(90deg,#fff 15%,#6fc8ff 65%,#278aff);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .intro{font-size:1.12rem;color:var(--muted);max-width:610px}.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}
+    .hero-art{min-height:390px;border:1px solid var(--line);border-radius:26px;background:radial-gradient(circle at 50% 40%,#14539a55,transparent 48%),linear-gradient(145deg,#111d31,#090e19);display:grid;place-items:center;position:relative;overflow:hidden}
+    .hero-art:before,.hero-art:after{content:"";position:absolute;border:1px solid #318dff3d;border-radius:50%;width:300px;height:300px}.hero-art:after{width:410px;height:410px}
+    .monogram{z-index:1;font-size:8rem;font-weight:950;letter-spacing:-12px;text-shadow:0 0 55px #238bff99}.monogram span{color:var(--cyan)}
+    .art-label{position:absolute;bottom:22px;left:24px;color:#a9c5e8;font-size:.78rem;letter-spacing:2px;text-transform:uppercase}
+    section{padding:78px 0}.section-head{margin-bottom:34px}.section-head h2{font-size:2.3rem;letter-spacing:-1px;margin:8px 0}.section-head p{color:var(--muted);max-width:650px;margin:0}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:17px;padding:27px}
+    .panel p{color:var(--muted);margin-bottom:0}.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.stat{background:var(--panel2);padding:19px;border-radius:13px;border:1px solid var(--line)}.stat strong{display:block;font-size:1.4rem;color:var(--cyan)}.stat small{color:var(--muted)}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.service{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px;transition:.2s}.service:hover,.project:hover{transform:translateY(-4px);border-color:#258bff88}
+    .ico{width:48px;height:48px;display:grid;place-items:center;border-radius:13px;background:#1377e51c;color:var(--cyan);font-size:1.45rem;margin-bottom:17px}.service h3{margin:0 0 8px}.service p{margin:0;color:var(--muted);font-size:.94rem}
+    .skills{display:flex;flex-wrap:wrap;gap:10px}.tag{padding:9px 14px;border:1px solid var(--line);background:#0d1523;border-radius:999px;color:#c9d8ed;font-size:.9rem}
+    .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.project{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--panel);transition:.2s}
+    .visual{height:190px;display:grid;place-items:center;position:relative;overflow:hidden}.visual.logo{background:radial-gradient(circle,#174f8e,#081322 70%)}.visual.branding{background:linear-gradient(135deg,#172c42,#10131f)}.visual.social{background:linear-gradient(135deg,#0b2a49,#17203b)}
+    .visual .big{font-size:3.5rem;font-weight:950;letter-spacing:-4px}.visual .shape{width:100px;height:100px;border:9px solid #67cfff;border-radius:27px;transform:rotate(45deg);box-shadow:0 0 40px #168bff66}
+    .project-info{padding:19px}.project-info h3{margin:0 0 5px}.project-info p{margin:0;color:var(--muted);font-size:.9rem}.project-info small{color:var(--cyan);display:block;margin-top:12px}
+    .process{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.step{padding:20px;border-top:2px solid var(--blue);background:var(--panel);border-radius:0 0 13px 13px}.step b{color:var(--cyan);font-size:.8rem}.step h3{margin:8px 0}.step p{color:var(--muted);font-size:.9rem;margin:0}
+    .contact{background:linear-gradient(135deg,#0e1b30,#0b111d);border:1px solid var(--line);border-radius:22px;padding:42px;display:flex;align-items:center;justify-content:space-between;gap:25px}.contact p{color:var(--muted);margin-bottom:0}.contact h2{font-size:2.2rem;margin:0}
+    footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    @media(max-width:800px){.navlinks{display:none}.hero{grid-template-columns:1fr;padding:75px 0 50px;gap:35px}.hero-art{min-height:300px}.about-grid{grid-template-columns:1fr}.cards,.projects{grid-template-columns:repeat(2,1fr)}.process{grid-template-columns:repeat(2,1fr)}.contact{align-items:flex-start;flex-direction:column}}
+    @media(max-width:540px){.wrap{width:min(100% - 30px,var(--max))}h1{letter-spacing:-2px}.cards,.projects{grid-template-columns:1fr}.process{grid-template-columns:1fr 1fr}.contact{padding:27px}.contact h2{font-size:1.8rem}section{padding:58px 0}.hero{min-height:auto}.monogram{font-size:6rem}}
+  </style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+  <a class="brand" href="#home">DAVE <span>DAE.</span></a>
+  <div class="navlinks"><a href="#about">About</a><a href="#services">Services</a><a href="#work">Portfolio</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div>
+  <a class="btn" href="#contact">Let's talk</a>
+</nav></div></header>
+<main>
+  <div class="wrap hero" id="home">
+    <div>
+      <div class="eyebrow">Graphic designer · Tech enthusiast</div>
+      <h1>Ideas into<br><span class="gradient">visual impact.</span></h1>
+      <p class="intro">I'm Dave Dae — a creative designer and technology enthusiast who helps ideas stand out through memorable logos, strong visual identities, digital graphics and modern web experiences.</p>
+      <div class="actions"><a class="btn" href="#work">Explore my work</a><a class="btn ghost" href="#contact">Hire me</a></div>
+    </div>
+    <div class="hero-art"><div class="monogram">D<span>D</span></div><div class="art-label">Creative thinking · Digital craft</div></div>
+  </div>
+
+  <section id="about"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">A little about me</div><h2>Creative mind. Tech-driven approach.</h2></div>
+    <div class="about-grid">
+      <div class="panel"><p>I enjoy combining creativity and technology to make useful, attractive digital experiences. My main focus is logo design and graphic design, with growing interests across branding, web design and digital tools. I value clear communication, thoughtful details and designs that serve a purpose.</p><p>Whether you are starting a brand, promoting a business or building an online presence, I aim to help you present your ideas professionally.</p></div>
+      <div class="stats"><div class="stat"><strong>Logo-first</strong><small>Core creative focus</small></div><div class="stat"><strong>Digital</strong><small>Design & technology</small></div><div class="stat"><strong>Responsive</strong><small>Web experiences</small></div><div class="stat"><strong>Collaborative</strong><small>Client-focused process</small></div></div>
+    </div>
+  </div></section>
+
+  <section id="services"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">What I can help with</div><h2>Services</h2><p>Creative and digital services for individuals, creators, startups and small businesses.</p></div>
+    <div class="cards">
+      <article class="service"><div class="ico">✳</div><h3>Logo Design</h3><p>Distinctive logo concepts that help a brand look recognizable, professional and memorable.</p></article>
+      <article class="service"><div class="ico">◈</div><h3>Brand Identity</h3><p>Colour palettes, typography and visual direction that bring consistency to your brand.</p></article>
+      <article class="service"><div class="ico">▧</div><h3>Social Media Graphics</h3><p>Post designs, banners, thumbnails and promotional graphics made to catch attention.</p></article>
+      <article class="service"><div class="ico">▣</div><h3>Flyers & Posters</h3><p>Clean promotional designs for events, products, services and announcements.</p></article>
+      <article class="service"><div class="ico">⌘</div><h3>Web Design</h3><p>Modern, mobile-friendly website layouts that make information easy to explore.</p></article>
+      <article class="service"><div class="ico">⌁</div><h3>Frontend & Digital Projects</h3><p>Interest and practical work in web technologies, digital tools and user-friendly interfaces.</p></article>
+    </div>
+  </div></section>
+
+  <section id="work"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">Selected concepts</div><h2>Portfolio showcase</h2><p>These are visual concept placeholders to demonstrate the types of projects I can create. Replace them with your real client work and designs.</p></div>
+    <div class="projects">
+      <article class="project"><div class="visual logo"><div class="big">NOVA<span style="color:#62caff">.</span></div></div><div class="project-info"><h3>Nova — Logo Concept</h3><p>A bold, modern identity direction for a creative technology brand.</p><small>Logo design · Brand concept</small></div></article>
+      <article class="project"><div class="visual branding"><div class="shape"></div></div><div class="project-info"><h3>Vertex — Brand Identity</h3><p>A geometric visual direction exploring clarity, confidence and consistency.</p><small>Branding · Visual identity</small></div></article>
+      <article class="project"><div class="visual social"><div class="big">CREATE<br><span style="color:#62caff">MORE.</span></div></div><div class="project-info"><h3>Creator — Social Graphics</h3><p>A high-contrast promotional graphic direction for digital creators.</p><small>Social media · Digital graphics</small></div></article>
+    </div>
+  </div></section>
+
+  <section id="skills"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">Tools & capabilities</div><h2>Skills I'm building and using</h2><p>My portfolio combines creative design interests with technology and digital problem-solving.</p></div>
+    <div class="skills">
+      <span class="tag">Logo Design</span><span class="tag">Graphic Design</span><span class="tag">Branding</span><span class="tag">Typography</span><span class="tag">Colour Theory</span><span class="tag">Social Media Design</span><span class="tag">Flyer & Poster Design</span><span class="tag">Thumbnail Design</span><span class="tag">UI/UX Principles</span><span class="tag">Web Design</span><span class="tag">HTML & CSS</span><span class="tag">JavaScript</span><span class="tag">Frontend Development</span><span class="tag">Creative Problem-solving</span><span class="tag">AI-assisted Workflows</span>
+    </div>
+  </div></section>
+
+  <section><div class="wrap">
+    <div class="section-head"><div class="eyebrow">How I work</div><h2>A simple, clear process</h2></div>
+    <div class="process">
+      <div class="step"><b>01 / DISCOVER</b><h3>Understand</h3><p>Discuss your goals, audience, style and project needs.</p></div>
+      <div class="step"><b>02 / CREATE</b><h3>Design</h3><p>Develop a visual direction and create the first concept.</p></div>
+      <div class="step"><b>03 / REFINE</b><h3>Improve</h3><p>Use your feedback to polish the details and final result.</p></div>
+      <div class="step"><b>04 / DELIVER</b><h3>Hand over</h3><p>Prepare and deliver the agreed final files or website.</p></div>
+    </div>
+  </div></section>
+
+  <section id="contact"><div class="wrap"><div class="contact">
+    <div><div class="eyebrow">Have a project in mind?</div><h2>Let's create something<br>that stands out.</h2><p>Available for design projects, collaborations and online opportunities.</p></div>
+    <a class="btn" href="mailto:davedae006@gmail.com?subject=Portfolio%20Enquiry">Contact Dave</a>
+  </div></div></section>
+</main>
+<footer><div class="wrap foot"><span>© <span id="year"></span> Dave Dae. All rights reserved.</span><span>Designed with creativity & technology.</span></div></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body></html>
